@@ -12,3 +12,7 @@ def progress():
 @auth.route('/arcade', methods = ['GET', 'POST'])
 def arcade():
     return render_template("arcade.html")
+
+@auth.route('/profile', methods = ['GET', 'POST'])
+def profile():
+    return render_template("profile.html")
