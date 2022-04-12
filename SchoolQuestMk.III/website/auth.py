@@ -73,4 +73,14 @@ def quiz():
 def quizResults():
     return render_template("student-quiz-results.html", user=current_user)
 
+@auth.route('/arcade', methods = ['GET', 'POST'])
+def arcade():
+    return render_template("arcade.html", user=current_user)
 
+@auth.route('/progress', methods = ['GET', 'POST'])
+def progress():
+    return render_template("progress.html", user=current_user)
+
+@auth.route('/profile', methods = ['GET', 'POST'])
+def profile():
+    return render_template("profile.html", user=current_user)
