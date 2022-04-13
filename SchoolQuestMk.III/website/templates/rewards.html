@@ -4,8 +4,9 @@
 <form method="POST">
     <h1 align = "center"> SchoolQuest Rewards </h1>
     <div class="wizard">
-    <h3 style = "font-family:verdana" >A wizard hat for your avatar.</h3>
-    <img src="https://www.pngfind.com/pngs/m/503-5037896_wizard-hat-png-wizard-hat-clipart-transparent-png.png" alt="A wizard hat for your avatar.">
+    <h3 style = "font-family:verdana" ><b>A wizard hat for your avatar.</b></h3>
+    <h4>200 Coins</h4>
+    <img id = "wizard" src="https://www.pngfind.com/pngs/m/503-5037896_wizard-hat-png-wizard-hat-clipart-transparent-png.png" alt="A wizard hat for your avatar.">
     </div>
     <style>
     .wizard img{
@@ -16,24 +17,43 @@
         max-width: 100%
     }
     </style>
-    <buttom type = "Purchase" class = "btn btn-primary">
+    <script>
+        var wHat = 0;
+        function purchasedW()
+        {
+            var img = document.getElementById("wizard");
+            img.src="https://static.thenounproject.com/png/256193-200.png";
+            return false;
+            var wHat=1;
+        }
+        function purchasedC()
+        {
+            var img = document.getElementById("Homework-Coupon");
+            img.src="https://static.thenounproject.com/png/256193-200.png";
+            return false;
+        }
+        
+    </script>
+    <buttom type = "Purchase" class = "btn btn-primary" onclick="purchasedW();">
         Purchase wizard hat
     </buttom>
+
 <p><br><br></p>
     <div class="Homework-Coupon">
-        <h3 style = "font-family:verdana">A coupon to drop a homework grade.</h3>
-        <img src="https://activitiesforkids.com/afkimages/no-homework-coupon.jpg"  alt="A coupon to drop a homework grade.">
+        <h3 style = "font-family:verdana"><b>A coupon to drop a homework grade.</b></h3>
+        <h4>500 Coins</h4>
+        <img id="Homework-Coupon"src="https://activitiesforkids.com/afkimages/no-homework-coupon.jpg"  alt="A coupon to drop a homework grade.">
         </div>
         <style>
         .Homework-Coupon img{
             border-radius: 5px;
-            height: 150px;
+            height: 250px;
             width: 250px;
             margin-bottom: 22px;
             max-width: 100%
         }
         </style>
-        <buttom type = "Purchase" class = "btn btn-primary">
+        <buttom type = "Purchase" class = "btn btn-primary" onclick="purchasedC();">
             Purchase homework coupon
         </buttom>
 </form>
