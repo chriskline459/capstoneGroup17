@@ -1,10 +1,27 @@
 {% extends "base.html" %}
 {% block title %} Arcade {% endblock %}
 {%block content %}
-<form method="POST">
     <h1 align = "center"> SchoolQuest Arcade </h1>
     <h2 align = "center"> Welcome to the arcade!</h2>
     <h3 align = "center"> 
        Here you can play learning games to gain points for rewards in class! 
     </h3>
+    <h1>Coin balance:  <span id="numcoins"></span></h1>
+
+    <script>
+        var coins = 20;
+        function givecoin()
+        {
+            coins = coins + 5;
+            document.getElementById("numcoins").innerHTML = coins;
+            window.alert("You now have " + coins + " coins");
+        }
+    </script>
+    <form method="POST">
+      
+      <br />
+      <div align="center">
+        <buttom type="submit" class="btn btn-primary" onclick="givecoin();">Add coins</buttom>
+      </div>
+    </form>
 {%endblock%}
