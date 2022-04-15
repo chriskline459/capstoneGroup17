@@ -75,6 +75,12 @@ def quizResults():
 
 @auth.route('/arcade', methods = ['GET', 'POST'])
 def arcade():
+    if request.method == 'POST':
+        pts = request.form.get('note')
+        new_points = Note(data=pts, user_id=current_user.id)
+        db.session.add(new_points)
+        db.session.commit()
+        flash('Points added!', category='success')
     return render_template("arcade.html", user=current_user)
 
 @auth.route('/progress', methods = ['GET', 'POST'])
