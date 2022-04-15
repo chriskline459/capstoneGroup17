@@ -3,6 +3,7 @@
 {%block content %}
 <form method="POST">
     <h1 align = "center"> SchoolQuest Rewards </h1>
+    <h1>Coin balance:  <span id="wcoin"></span></h1>
     <div class="wizard">
     <h3 style = "font-family:verdana" ><b>A wizard hat for your avatar.</b></h3>
     <h4>200 Coins</h4>
@@ -18,13 +19,19 @@
     }
     </style>
     <script>
+        var foo = localStorage.getItem("coinnn");
+        document.getElementById("wcoin").innerHTML = foo;
         var wHat = 0;
         function purchasedW()
         {
+            if (foo => 200){
+            foo = foo-200;
             var img = document.getElementById("wizard");
             img.src="https://static.thenounproject.com/png/256193-200.png";
             return false;
             var wHat=1;
+            document.getElementById("wcoin").innerHTML = foo;
+            }
         }
         function purchasedC()
         {
