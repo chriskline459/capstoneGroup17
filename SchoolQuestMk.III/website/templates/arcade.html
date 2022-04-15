@@ -9,12 +9,12 @@
     <h1>Coin balance:  <span id="numcoins"></span></h1>
 
     <script>
-        var coins = 20;
+      var coins = 0;
         function givecoin()
         {
-            coins = coins + 5;
+            coins = coins + 100;
             document.getElementById("numcoins").innerHTML = coins;
-            window.alert("You now have " + coins + " coins");
+            localStorage.setItem("coinnn", coins)
         }
     </script>
     <form method="POST">
